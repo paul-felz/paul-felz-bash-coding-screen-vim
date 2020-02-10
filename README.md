@@ -15,4 +15,4 @@ In "bash-coding.sh" \
 3.) Set your Paths to BIN, LIB and from where you want to browse usually. \
 4.) Set the name of your main 
 
-Start your bash script. \
+Start your bash script. 
