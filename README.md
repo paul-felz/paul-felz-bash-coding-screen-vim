@@ -1,7 +1,7 @@
 bash-coding-screen-vim
 
-Bash script for starting a coding environment with screen and vim. 
-4 screen windows: 
+Bash script for starting a coding environment with screen and vim. \
+4 screen windows: \
 0.) Browse in file system 
 1.) Bin folder to build/interpret 
 2.) Main in vim 
