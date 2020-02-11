@@ -17,7 +17,7 @@ In "bash-coding.sh" \
 
 Start your bash script. 
 
-![Browse](./pictures/browse.png)
-![Bin](./pictures/bin.png)
-![Main](./pictures/main.png)
-![Lib](./pictures/lib.png)
+![Browse](./Pictures/browse.png)
+![Bin](./Pictures/bin.png)
+![Main](./Pictures/main.png)
+![Lib](./Pictures/lib.png)
