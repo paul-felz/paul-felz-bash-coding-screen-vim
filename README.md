@@ -16,3 +16,8 @@ In "bash-coding.sh" \
 4.) Set the name of your main 
 
 Start your bash script. 
+
+![Browse](./pictures/browse.png)
+![Bin](./pictures/bin.png)
+![Main](./pictures/main.png)
+![Lib](./pictures/lib.png)

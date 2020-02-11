@@ -12,7 +12,7 @@ vbell on
 vbell_msg "bell on %t (%n)"
 
 # look and feel
-caption always "%{= bb}%{+b w}%n %t %h %=%l %H %c"
+caption always "%3n %t%? @%u%?%? [%h]%?%=%c"
 hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
 
 activity "Activity in %t(%n)"

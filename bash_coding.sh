@@ -19,7 +19,7 @@ MAINNAME='main.extension'
 screen -dmS scripting -c ./.screenrc
 
 #style screen and vim coding environment
-screen -S "scripting" -p 0 -X stuff "ls; source ./.bash_profile$(printf \\r)"
+screen -S "scripting" -p 0 -X stuff "source ./.bash_profile; cd $BROWSEPATH$(printf \\r)"
 screen -S "scripting" -p 1 -X stuff "source ./.bash_profile; cd $BINPATH$(printf \\r)"
 screen -S "scripting" -p 2 -X stuff "source ./.bash_profile; cd $BINPATH; vim $MAINNAME$(printf \\r)"
 screen -S "scripting" -p 3 -X stuff "source ./.bash_profile; cd $LIBPATH; vim -c ":Ex" -c ":Vex" -c ":Vex" $(printf \\r)"
