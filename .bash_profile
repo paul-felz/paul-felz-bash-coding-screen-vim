@@ -18,7 +18,7 @@ function mark {
 
 #VIMPATH
 export MYVIMRC="$CONFPATH/.vimrc"
-export VIMINIT=":set runtimepath+=$CONFPATH/.vim | :source $MYVIMRC"
+export VIMINIT=:set runtimepath+="$CONFPATH/.vim" | :source "$MYVIMRC"
 export term=xterm-256color
 export VIMCOLOR=$VIMCOLOR
 
