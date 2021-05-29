@@ -1,7 +1,7 @@
 #ALIAS
 alias br='cd '$BROWSEPATH
 alias lib='cd '$LIBPATH
-alias bin='cd '$BINPATH
+alias src='cd '$SRCPATH
 
 #Kill attached screen session
 killd () {
@@ -11,15 +11,7 @@ screen -S "${session}" -X quit;
 done
 }
 
-#export pwd path
-function mark {
-    export $1=`pwd`;
-}
-
 #VIMPATH
-export MYVIMRC="$CONFPATH/.vimrc"
-export VIMINIT=:set runtimepath+="$CONFPATH/.vim" | :source "$MYVIMRC"
-export term=xterm-256color
-export VIMCOLOR=$VIMCOLOR
-
-PATH="/usr/local/bin:$PATH"
+export VIMINIT='source '$CONFPATH$VIMRC
+term=xterm-256color
+VIMCOLOR=$VIMCOLOR

@@ -1,28 +1,32 @@
 #!/bin/bash
-#bash script to start scripting with screen and vim
-#Paul Felz - electrical engineering, coding and music-making in Berlin
+#bash script bootstrap for coding IDE with screen and vim
+#Paul Smiles - electrical engineering, coding and music-making in Berlin
 #
-source ./.bash_profile
-mark CONFPATH
+
+#Path and names of configuration files
+export CONFPATH='~/path/to/etc/'
+export RTPATH=$CONFPATH/.vim
+export SCREENRC=.screenrc
+export BASHRC=.bash_profile
+export VIMRC=.vimrc
 
 #Your Color
-VIMCOLOR='deus'
+export VIMCOLOR='deus'
 
-#Your Paths
-BINPATH='~/path/to/bin/'
-LIBPATH='~/path/to/lib/'
-BROWSEPATH='~/path/to/browse/'
-MAINNAME='main.extension'
+#Your Paths (please use full path)
+export SRCPATH='~/path/to/src/'
+export LIBPATH='~/path/to/lib/'
+export BROWSEPATH='~/path/to/browse/'
+MAINNAME=$SRCPATH'main.extension'
 
-
-#start deatached screen with name "scripting" and own config .screenrc
-screen -dmS scripting -c ./.screenrc
+#start deatached screen with name "coding" and own config .screenrc
+eval "screen -dmS coding -c $CONFPATH$SCREENRC"
 
 #style screen and vim coding environment
-screen -S "scripting" -p 0 -X stuff "source ./.bash_profile; cd $BROWSEPATH$(printf \\r)"
-screen -S "scripting" -p 1 -X stuff "source ./.bash_profile; cd $BINPATH$(printf \\r)"
-screen -S "scripting" -p 2 -X stuff "source ./.bash_profile; cd $BINPATH; vim $MAINNAME$(printf \\r)"
-screen -S "scripting" -p 3 -X stuff "source ./.bash_profile; cd $LIBPATH; vim -c ":Ex" -c ":Vex" -c ":Vex" $(printf \\r)"
+screen -S "coding" -p 0 -X stuff "source $CONFPATH$BASHRC; cd $BROWSEPATH$(printf \\r)"
+screen -S "coding" -p 1 -X stuff "source $CONFPATH$BASHRC; cd $SRCPATH$(printf \\r)"
+screen -S "coding" -p 2 -X stuff "source $CONFPATH$BASHRC; cd $SRCPATH; vim $MAINNAME$(printf \\r)"
+screen -S "coding" -p 3 -X stuff "source $CONFPATH$BASHRC; cd $LIBPATH; vim -c ":Ex" -c ":Vex" -c ":Vex" $(printf \\r)"
 
 #attach screen
-screen -r scripting
+screen -r coding

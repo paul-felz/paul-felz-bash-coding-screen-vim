@@ -1,4 +1,12 @@
-syntax on
+"set runtimepath and add library path to find and gf
+set rtp+=$RTPATH
+let &path.=$LIBPATH
+
+"set language
+set langmenu=en_US
+let $LANG = 'en_US'
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
 
 set nocompatible
 syntax on
@@ -20,3 +28,4 @@ autocmd VimResized * wincmd =
 set t_Co=256
 
 colorscheme $VIMCOLOR
+

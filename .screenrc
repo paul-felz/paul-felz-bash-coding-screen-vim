@@ -21,15 +21,18 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
 defbce "on"
 term "screen-256color"
 
+# start coding environment in .screenrc
 shelltitle "shell"
 shell -$SHELL
 
-# scripting .screenrc
 screen bash 
 title "browse"
 screen bash
-title "bin"
+title "src"
 screen bash
 title "main"
 screen bash
 title "lib"
+
+#keybindings
+bind c eval "screen bash" "stuff 'source $CONFPATH$BASHRC^M'"
