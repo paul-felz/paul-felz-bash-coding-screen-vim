@@ -1,6 +1,9 @@
-"set runtimepath and add library path to find and gf
+"set runtimepath and add library path to make find and gf usable
 set rtp+=$RTPATH
 let &path.=$LIBPATH
+
+set nocompatible "not vi-compatible
+set ic "caseinsensitive search in vim"
 
 "set language
 set langmenu=en_US
@@ -8,24 +11,25 @@ let $LANG = 'en_US'
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
-set nocompatible
+
+"look and feel
+"
+filetype plugin indent on "load filetypefile and indentfile from rtp
+
 syntax on
-
-filetype plugin indent on
-
 set number
-set autoindent
-set tabstop=4
-set shiftwidth=4
-set ic
-set softtabstop=4
-set expandtab
-set smarttab
+set autoindent	"copy indentation of line before
+
+set tabstop=4 "size of hard tabstop
+set shiftwidth=4 "size of an indent
+set softtabstop=4 "if expandtab, how many spaces one tab
+set expandtab "use spaces instead of tab characters
+set smarttab "how tabs are interpreted on cursorposition
+
+autocmd VimResized * wincmd = "adapt resize of terminal window
+
+"set color
 set background=dark
-
-autocmd VimResized * wincmd =
-
 set t_Co=256
-
 colorscheme $VIMCOLOR
 
