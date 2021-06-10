@@ -15,3 +15,5 @@ done
 export VIMINIT='source '$CONFPATH$VIMRC
 term=xterm-256color
 VIMCOLOR=$VIMCOLOR
+
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
